@@ -1,5 +1,15 @@
 module "s3_bucket" {
-  source = "https://github.com/marblerun/terraform-aws-s3-bucket/aws/"
+  source = "terraform-aws-modules/s3-bucket/aws"
+
+  bucket = "my-s3-bucket"
+  acl    = "private"
+
+  versioning = {
+    enabled = true
+  }
+
+}
+"
   bucket = "my-s3-bucket"
   bucket_prefix = "mike-shield"
 
